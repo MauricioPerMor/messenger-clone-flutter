@@ -27,8 +27,13 @@ class _HomeState extends State<Home> {
     setState(() {});
   }
 
-  getChatRoomIdByUsernames(String a, String b) {
-    if (a.substring(0, 1).codeUnitAt(0) > b.substring(0, 1).codeUnitAt(0)) {
+getChatRoomIdByUsernames(String a, String b) {
+    print("usuarios de get chatroomId{$a},{$b}");
+    // var vera = a.substring(0,4).codeUnitAt(3);
+    // var verb = b.substring(0,4).codeUnitAt(3);
+    // print("usuarios de get chatroomId{$vera},{$verb}");
+    //if (a.substring(0,4).codeUnitAt(3) > b.substring(0,4).codeUnitAt(3)) {
+     if (a.compareTo(b)== 1) { //si a es menor que b devuelve -1, 0 si son iguales, 1 si b<a
       return "$b\_$a";
     } else {
       return "$a\_$b";
